@@ -19,7 +19,7 @@ git clone https://github.com/librenms/librenms.git librenms
 systemctl start mariadb
 systemctl enable mariadb
 mysql -u root <<EOF
-	CREATE DATABASE librenms_new CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+	CREATE DATABASE librenms CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 	CREATE USER 'librenms'@'localhost' IDENTIFIED BY 'KH_password';
 	GRANT ALL PRIVILEGES ON librenms.* TO 'librenms'@'localhost';
 	FLUSH PRIVILEGES;
