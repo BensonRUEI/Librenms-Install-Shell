@@ -26,6 +26,7 @@ LibreNMS是一套開源的網路裝置管理軟體，其分支於Observium，並
 
 ### Step 4:
 將Step所顯示的config.php文件寫入至/opt/librenms/config.php
+
     vim /opt/librenms/config.php
 
 ### Step 5:
