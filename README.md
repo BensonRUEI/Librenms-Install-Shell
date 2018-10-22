@@ -54,7 +54,7 @@ LibreNMS是一套開源的網路裝置管理軟體，其分支於Observium，並
 
 ### 安裝教學影片
     Ubuntu 18.04 install LibreNMS
-    [![](http://img.youtube.com/vi/PDYOwL5pDG8/0.jpg)](http://www.youtube.com/watch?v=PDYOwL5pDG8 "")
+[![](http://img.youtube.com/vi/PDYOwL5pDG8/0.jpg)](http://www.youtube.com/watch?v=PDYOwL5pDG8 "")
     
     CentOS 7 install LibreNMS
-    [![](http://img.youtube.com/vi/UxsgXax2wBE/0.jpg)](http://www.youtube.com/watch?v=UxsgXax2wBE "")
+[![](http://img.youtube.com/vi/UxsgXax2wBE/0.jpg)](http://www.youtube.com/watch?v=UxsgXax2wBE "")
