@@ -138,6 +138,6 @@ chown -R librenms:librenms /opt/librenms
 setfacl -d -m g::rwx /opt/librenms/rrd /opt/librenms/logs 
 setfacl -R -m g::rwx /opt/librenms/rrd /opt/librenms/logs
 
-clear
+#clear
 echo "安裝完成"
 echo "請開啟網址: http://"$ip"/install.php"
