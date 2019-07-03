@@ -1,7 +1,7 @@
 #Ubuntu install Librenms
 
 #get ip
-sudo apt install -y net-tools
+sudo apt install -y net-tools git
 ip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.2.0.1'`
 #安裝相關套件
 sudo add-apt-repository universe -y
@@ -118,6 +118,6 @@ setfacl -d -m g::rwx /opt/librenms/rrd /opt/librenms/logs /opt/librenms/bootstra
 setfacl -R -m g::rwx /opt/librenms/rrd /opt/librenms/logs /opt/librenms/bootstrap/cache/ /opt/librenms/storage/
 
 
-clear
+#clear
 echo "安裝完成"
 echo "請開啟網址: http://"$ip"/install.php"
