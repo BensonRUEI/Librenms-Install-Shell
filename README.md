@@ -3,6 +3,10 @@ LibreNMS是一套開源的網路裝置管理軟體，其分支於Observium，並
 
 本專案為自動化安裝LibreNMS Shell Script。
 
+## 安裝準備：
+    安裝git
+    centos: yum install git -y
+    ubuntu: apt install git -y
 
 ## 安裝步驟：
 
