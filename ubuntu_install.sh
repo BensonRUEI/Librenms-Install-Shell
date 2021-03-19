@@ -1,4 +1,5 @@
 #Ubuntu install Librenms
+#20210320 改PHP7.4
 
 #get ip
 sudo apt install -y -q net-tools git
