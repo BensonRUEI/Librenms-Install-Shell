@@ -1,7 +1,7 @@
 #Ubuntu install Librenms
 
 #get ip
-sudo apt install -y net-tools git
+sudo apt install -y -q net-tools git
 ip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.2.0.1'`
 #安裝相關套件
 echo "安裝相關套件"
