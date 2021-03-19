@@ -125,6 +125,9 @@ echo		}	 >> /etc/nginx/conf.d/librenms.conf
 rm /etc/nginx/sites-enabled/default
 systemctl restart nginx
 
+#Enable lnms
+ln -s /opt/librenms/lnms /usr/bin/lnms
+cp /opt/librenms/misc/lnms-completion.bash /etc/bash_completion.d/
 
 #配置snmpd
 cp /opt/librenms/snmpd.conf.example /etc/snmp/snmpd.conf
