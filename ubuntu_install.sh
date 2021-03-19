@@ -38,7 +38,7 @@ echo "設定PHP依賴"
 #cd /opt/librenms
 #./scripts/composer_wrapper.php install --no-dev
 #exit
-sudo -u librenms php /scripts/composer_wrapper.php install --no-dev
+sudo -u librenms php /opt/librenms/scripts/composer_wrapper.php install --no-dev
 
 #設定資料庫(這邊注意要修改密碼，預設為KH_password)
 echo "設定資料庫"
