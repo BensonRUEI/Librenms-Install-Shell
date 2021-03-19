@@ -89,7 +89,6 @@ systemctl restart mysql
 echo date.timezone = \"Asia/Taipei\" >> /etc/php/7.4/fpm/php.ini
 echo date.timezone = \"Asia/Taipei\" >> /etc/php/7.4/cli/php.ini
 phpenmod mcrypt
-systemctl restart php7.4-fpm
 
 #設定PHP-FPM
 #cp /etc/php/7.4/fpm/pool.d/www.conf /etc/php/7.4/fpm/pool.d/librenms.conf
@@ -99,6 +98,7 @@ sed -i 's/user \= www-data/user = librenms/g' /etc/php/7.4/fpm/pool.d/librenms.c
 sed -i 's/group \= www-data/group = librenms/g' /etc/php/7.4/fpm/pool.d/librenms.conf
 sed -i 's/php\/php7.4-fpm.sock/php-fpm-librenms.sock/g' /etc/php/7.4/fpm/pool.d/librenms.conf
 sed -i 's/listen.group \= librenms/listen.group = www-data/g' /etc/php/7.4/fpm/pool.d/librenms.conf
+systemctl restart php7.4-fpm
 
 #設定NGINX
 echo		server {	 >> /etc/nginx/conf.d/librenms.conf
