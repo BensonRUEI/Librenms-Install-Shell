@@ -34,10 +34,11 @@ setfacl -R -m g::rwx /opt/librenms/rrd /opt/librenms/logs /opt/librenms/bootstra
 
 #設定PHP依賴
 echo "設定PHP依賴"
-su - librenms
-cd /opt/librenms
-./scripts/composer_wrapper.php install --no-dev
-exit
+#su - librenms
+#cd /opt/librenms
+#./scripts/composer_wrapper.php install --no-dev
+#exit
+sudo -u librenms php /scripts/composer_wrapper.php install --no-dev
 
 #設定資料庫(這邊注意要修改密碼，預設為KH_password)
 echo "設定資料庫"
