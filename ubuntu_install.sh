@@ -9,8 +9,9 @@ sudo apt update -y
 #sudo apt install -y acl curl composer fping git graphviz imagemagick mariadb-client mariadb-server mtr-tiny nginx-full nmap php7.2-cli php7.2-curl php7.2-fpm php7.2-gd php7.2-json php7.2-mbstring php7.2-mysql php7.2-snmp php7.2-xml php7.2-zip python-memcache python-mysqldb rrdtool snmp snmpd whois vim curl
 apt install software-properties-common -y
 #sudo apt install -y curl composer fping git graphviz imagemagick mariadb-client mariadb-server mtr-tiny nginx-full nmap php7.2-cli php7.2-curl php7.2-fpm php7.2-gd php7.2-json php7.2-mbstring php7.2-mysql php7.2-snmp php7.2-xml php7.2-zip python-memcache python-mysqldb rrdtool snmp snmpd whois vim curl
-sudo apt install -y curl composer fping git graphviz imagemagick mariadb-client mariadb-server mtr-tiny nginx-full nmap php7.2-cli php7.2-curl php7.2-fpm php7.2-gd php7.2-json php7.2-mbstring php7.2-mysql php7.2-snmp php7.2-xml php7.2-zip python-memcache python-mysqldb rrdtool snmp snmpd whois unzip python3-pip 
- 
+#sudo apt install -y curl composer fping git graphviz imagemagick mariadb-client mariadb-server mtr-tiny nginx-full nmap php7.2-cli php7.2-curl php7.2-fpm php7.2-gd php7.2-json php7.2-mbstring php7.2-mysql php7.2-snmp php7.2-xml php7.2-zip python-memcache python-mysqldb rrdtool snmp snmpd whois unzip python3-pip 
+#20210319更新php7.4
+sudo apt install -y curl composer fping git graphviz imagemagick mariadb-client mariadb-server mtr-tiny nginx-full nmap php7.4-cli php7.4-curl php7.4-fpm php7.4-gd php7.4-json php7.4-mbstring php7.4-mysql php7.4-snmp php7.4-xml php7.4-zip acl rrdtool snmp snmpd whois unzip python3-pymysql python3-dotenv python3-redis python3-setuptools python3-pip 
 #新增使用者
 useradd librenms -d /opt/librenms -M -r
 usermod -a -G librenms www-data
@@ -76,10 +77,10 @@ systemctl restart mysql
 
 
 #設定Web Server
-echo date.timezone = \"Asia/Taipei\" >> /etc/php/7.2/fpm/php.ini
-echo date.timezone = \"Asia/Taipei\" >> /etc/php/7.2/cli/php.ini
+echo date.timezone = \"Asia/Taipei\" >> /etc/php/7.4/fpm/php.ini
+echo date.timezone = \"Asia/Taipei\" >> /etc/php/7.4/cli/php.ini
 phpenmod mcrypt
-systemctl restart php7.2-fpm
+systemctl restart php7.4-fpm
 
 #設定NGINX
 echo		server {	 >> /etc/nginx/conf.d/librenms.conf
