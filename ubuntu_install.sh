@@ -95,7 +95,7 @@ systemctl restart php7.4-fpm
 #cp /etc/php/7.4/fpm/pool.d/www.conf /etc/php/7.4/fpm/pool.d/librenms.conf
 cp /etc/php/7.4/fpm/pool.d/www.conf /etc/php/7.4/fpm/pool.d/librenms.conf
 sed -i 's/\[www\]/\[librenms\]/g' /etc/php/7.4/fpm/pool.d/librenms.conf
-sed -i 's/www-data/librenms/g' /etc/php/7.4/fpm/pool.d/librenms.conf
+sed -i 's/user = librenms/user = librenms/g' /etc/php/7.4/fpm/pool.d/librenms.conf
 sed -i 's/\/run\/php7.4-fpm.sock/php-fpm-librenms.sock/g' /etc/php/7.4/fpm/pool.d/librenms.conf
 
 #設定NGINX
