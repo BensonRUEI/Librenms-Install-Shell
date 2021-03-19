@@ -86,6 +86,7 @@ systemctl restart php7.4-fpm
 
 #設定PHP-FPM
 #cp /etc/php/7.4/fpm/pool.d/www.conf /etc/php/7.4/fpm/pool.d/librenms.conf
+sed -i 's/\[www\]/\[librenms\]/g' /etc/php/7.4/fpm/pool.d/librenms.conf
 
 #設定NGINX
 echo		server {	 >> /etc/nginx/conf.d/librenms.conf
